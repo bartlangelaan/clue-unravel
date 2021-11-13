@@ -66,7 +66,7 @@ export function useBoards() {
             "Loden pijp",
             "Revolver",
             "Touw",
-            "Loden pijp",
+            "Engelse sleutel",
           ].map((name) => ({ category: 1, name })),
           ...[
             "Balzaal",
