@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clue-unravel/static/css/main.b2e690a6.chunk.css",
-    "main.js": "/clue-unravel/static/js/main.2c2beaaf.chunk.js",
-    "main.js.map": "/clue-unravel/static/js/main.2c2beaaf.chunk.js.map",
+    "main.js": "/clue-unravel/static/js/main.d0c77b6c.chunk.js",
+    "main.js.map": "/clue-unravel/static/js/main.d0c77b6c.chunk.js.map",
     "runtime-main.js": "/clue-unravel/static/js/runtime-main.7403db86.js",
     "runtime-main.js.map": "/clue-unravel/static/js/runtime-main.7403db86.js.map",
     "static/css/2.7699c10d.chunk.css": "/clue-unravel/static/css/2.7699c10d.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.7699c10d.chunk.css",
     "static/js/2.ead396a3.chunk.js",
     "static/css/main.b2e690a6.chunk.css",
-    "static/js/main.2c2beaaf.chunk.js"
+    "static/js/main.d0c77b6c.chunk.js"
   ]
 }
