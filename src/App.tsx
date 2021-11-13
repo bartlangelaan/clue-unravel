@@ -31,7 +31,7 @@ function App() {
       <Drawer modal open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <DrawerHeader>
           <DrawerTitle>Clue Unravel</DrawerTitle>
-          <DrawerSubtitle>Made with &heart; by Bart</DrawerSubtitle>
+          <DrawerSubtitle>Made with &hearts; by Bart</DrawerSubtitle>
         </DrawerHeader>
         <DrawerContent>
           <List>
