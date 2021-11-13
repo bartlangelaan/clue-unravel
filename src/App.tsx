@@ -11,6 +11,7 @@ import { List, SimpleListItem } from "@rmwc/list";
 import "@rmwc/top-app-bar/styles";
 import "@rmwc/drawer/styles";
 import "@rmwc/list/styles";
+import "@rmwc/menu/styles";
 import { useCurrentPage } from "./storage/page";
 import { ActiveGame } from "./pages/game";
 import { HistoryOverview } from "./pages/history-overview";
