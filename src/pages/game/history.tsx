@@ -1,5 +1,6 @@
 import { Avatar } from "@rmwc/avatar";
 import { List, SimpleListItem } from "@rmwc/list";
+import { MenuItem, SimpleMenu } from "@rmwc/menu";
 import { useGameCalculator } from "../../providers/game-calculator";
 import { ClueBoard } from "../../storage/boards";
 import { ClueGame, useActiveGame } from "../../storage/game";
@@ -13,58 +14,77 @@ interface Props {
   setActiveGame: ReturnType<typeof useActiveGame>[1];
 }
 export function ActiveGameHistory(props: Props) {
-  const { board, activeGame } = props;
+  const { board, activeGame, setActiveGame } = props;
   const { calculatedActiveGame } = useGameCalculator();
 
   return (
     <List twoLine>
-      {activeGame.actions.map((action, actionI) => {
-        return action.type === "suggestion" ? (
-          <SimpleListItem
-            key={actionI}
-            className={styles.historyItem}
-            graphic={
-              <Avatar
-                name={activeGame.players[action.player].name}
-                style={purpleAvatar}
+      {activeGame.actions.map((action, actionI) => (
+        <SimpleMenu
+          handle={
+            action.type === "suggestion" ? (
+              <SimpleListItem
+                key={actionI}
+                className={styles.historyItem}
+                graphic={
+                  <Avatar
+                    name={activeGame.players[action.player].name}
+                    style={purpleAvatar}
+                  />
+                }
+                text={`Suggestion - ${
+                  typeof action.playerDisproved !== "undefined"
+                    ? `disproved by ${
+                        activeGame.players[action.playerDisproved].name
+                      }${
+                        typeof action.card !== "undefined"
+                          ? ` with ${board.cards[action.card].name}`
+                          : ""
+                      }`
+                    : `not disproved`
+                }`}
+                secondaryText={
+                  <>
+                    {action.suggestedCards.map((cardI) => {
+                      const possiblyShown =
+                        !calculatedActiveGame?.certainties.some(
+                          (c) =>
+                            c.player ===
+                              (action.playerDisproved ?? action.player) &&
+                            c.card === cardI &&
+                            c.owner === false
+                        );
+                      return (
+                        <div
+                          key={cardI}
+                          className={`${styles.suggestedCard} ${
+                            possiblyShown ? "" : styles.suggestedCardNotShown
+                          }`}
+                        >
+                          {board.cards[cardI].name}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
               />
-            }
-            text={`Suggestion - ${
-              typeof action.playerDisproved !== "undefined"
-                ? `disproved by ${
-                    activeGame.players[action.playerDisproved].name
-                  }${
-                    typeof action.card !== "undefined"
-                      ? ` with ${board.cards[action.card].name}`
-                      : ""
-                  }`
-                : `not disproved`
-            }`}
-            secondaryText={
-              <>
-                {action.suggestedCards.map((cardI) => {
-                  const possiblyShown = !calculatedActiveGame?.certainties.some(
-                    (c) =>
-                      c.player === (action.playerDisproved ?? action.player) &&
-                      c.card === cardI &&
-                      c.owner === false
-                  );
-                  return (
-                    <div
-                      key={cardI}
-                      className={`${styles.suggestedCard} ${
-                        possiblyShown ? "" : styles.suggestedCardNotShown
-                      }`}
-                    >
-                      {board.cards[cardI].name}
-                    </div>
-                  );
-                })}
-              </>
-            }
-          />
-        ) : null;
-      })}
+            ) : (
+              <SimpleListItem key={actionI} text="Unknown action" />
+            )
+          }
+        >
+          <MenuItem
+            onClick={() => {
+              setActiveGame({
+                ...activeGame,
+                actions: activeGame.actions.filter((a) => a !== action),
+              });
+            }}
+          >
+            Remove
+          </MenuItem>
+        </SimpleMenu>
+      ))}
     </List>
   );
 }
