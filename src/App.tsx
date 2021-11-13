@@ -13,6 +13,7 @@ import "@rmwc/drawer/styles";
 import "@rmwc/list/styles";
 import { useCurrentPage } from "./storage/page";
 import { ActiveGame } from "./pages/game";
+import { HistoryOverview } from "./pages/history-overview";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -59,6 +60,7 @@ function App() {
       />
       <TopAppBarFixedAdjust />
       {page === "game" && <ActiveGame />}
+      {page === "games" && <HistoryOverview />}
     </>
   );
 }
