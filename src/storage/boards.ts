@@ -54,7 +54,7 @@ export function useBoards() {
         cards: [
           ...[
             "Rosa Roodhart",
-            "Rev Green",
+            "Dominee Groenewoud",
             "Kolonel van Geelen",
             "Professor Pimpel",
             "Mw. Blauw van Draet",
