@@ -2,6 +2,7 @@
   "name": "clue-unravel",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/clue-unravel",
   "dependencies": {
     "@rmwc/avatar": "^6.1.4",
     "@rmwc/button": "^6.1.4",
