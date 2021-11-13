@@ -13,6 +13,7 @@
     "@rmwc/formfield": "^6.1.4",
     "@rmwc/icon-button": "^6.1.4",
     "@rmwc/list": "^6.1.4",
+    "@rmwc/menu": "^6.1.4",
     "@rmwc/ripple": "^6.1.4",
     "@rmwc/select": "^6.1.4",
     "@rmwc/tabs": "^6.1.4",
