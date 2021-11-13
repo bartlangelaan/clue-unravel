@@ -1,0 +1,10 @@
+.solution {
+  /* background: var(--mdc-theme-primary, #6200ee); */
+  background: var(--mdc-theme-secondary, #018786);
+  color: white;
+}
+
+td.notSolution {
+  /* background: red; */
+  text-decoration: line-through;
+}

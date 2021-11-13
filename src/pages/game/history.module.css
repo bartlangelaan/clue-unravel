@@ -1,0 +1,14 @@
+.historyItem :global(.mdc-list-item__text) {
+  flex-grow: 1;
+}
+
+.suggestedCard {
+  width: 33%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestedCardNotShown {
+  text-decoration: line-through;
+}
