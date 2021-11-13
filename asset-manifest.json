@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/clue-unravel/static/css/main.b2e690a6.chunk.css",
-    "main.js": "/clue-unravel/static/js/main.92f2a507.chunk.js",
-    "main.js.map": "/clue-unravel/static/js/main.92f2a507.chunk.js.map",
+    "main.js": "/clue-unravel/static/js/main.82f9ca89.chunk.js",
+    "main.js.map": "/clue-unravel/static/js/main.82f9ca89.chunk.js.map",
     "runtime-main.js": "/clue-unravel/static/js/runtime-main.7403db86.js",
     "runtime-main.js.map": "/clue-unravel/static/js/runtime-main.7403db86.js.map",
     "static/css/2.7699c10d.chunk.css": "/clue-unravel/static/css/2.7699c10d.chunk.css",
-    "static/js/2.60e98f4a.chunk.js": "/clue-unravel/static/js/2.60e98f4a.chunk.js",
-    "static/js/2.60e98f4a.chunk.js.map": "/clue-unravel/static/js/2.60e98f4a.chunk.js.map",
+    "static/js/2.9bbacd80.chunk.js": "/clue-unravel/static/js/2.9bbacd80.chunk.js",
+    "static/js/2.9bbacd80.chunk.js.map": "/clue-unravel/static/js/2.9bbacd80.chunk.js.map",
     "index.html": "/clue-unravel/index.html",
     "static/css/2.7699c10d.chunk.css.map": "/clue-unravel/static/css/2.7699c10d.chunk.css.map",
     "static/css/main.b2e690a6.chunk.css.map": "/clue-unravel/static/css/main.b2e690a6.chunk.css.map",
-    "static/js/2.60e98f4a.chunk.js.LICENSE.txt": "/clue-unravel/static/js/2.60e98f4a.chunk.js.LICENSE.txt"
+    "static/js/2.9bbacd80.chunk.js.LICENSE.txt": "/clue-unravel/static/js/2.9bbacd80.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7403db86.js",
     "static/css/2.7699c10d.chunk.css",
-    "static/js/2.60e98f4a.chunk.js",
+    "static/js/2.9bbacd80.chunk.js",
     "static/css/main.b2e690a6.chunk.css",
-    "static/js/main.92f2a507.chunk.js"
+    "static/js/main.82f9ca89.chunk.js"
   ]
 }
