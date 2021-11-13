@@ -21,10 +21,10 @@ export function ActiveGameHistory(props: Props) {
     <List twoLine>
       {activeGame.actions.map((action, actionI) => (
         <SimpleMenu
+          key={actionI}
           handle={
             action.type === "suggestion" ? (
               <SimpleListItem
-                key={actionI}
                 className={styles.historyItem}
                 graphic={
                   <Avatar
